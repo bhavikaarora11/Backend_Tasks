@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<main>
+    <ul>
+        <% products.forEach(product => { %>
+            <li>
+                <strong><%= product.name %></strong> - $<%= product.price.toFixed(2) %>
+            </li>
+        <% }) %>
+    </ul>
+</main>
+
+<%- include('partials/footer') %>
