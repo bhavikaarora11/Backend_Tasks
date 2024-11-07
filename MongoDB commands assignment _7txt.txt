@@ -1,0 +1,19 @@
+1) db.products.find( {$and: [ {stock:{$gt:0}} , {$and: [{price:{$gte:20}},{price:{$lte:100}}]}  ]})
+
+2) db.students.find({ $or: [ { $and: [{ att: { $gt: 91 } }, { grade: { $gt: 85 } }] }, { age: { $lt: 18 } }] })
+
+3) db.jobs.find( {$and:[{salary:{$gte:55550}},{location:'San Francisco'}]} )
+
+4) db.inventory.find({$and:[{category:'electronics'},{discount:{$gte:10}},{stock:{$gt:0}}]})
+
+5)  db.orders.find( {$or: [{status:'pending'} , {customer_type:'VIP'} , {amount:{$gt:100}} ] } )
+
+6) db.students.find({ $or: [ { $and: [{ age: { $gt: 18 } }, { grade: { $lt: 60 } }] }, { att: { $lt: 75 } }] })
+
+7) db.products.find({ category: "furniture", $or: [ { price: { $lt: 200 } }, { availability: { $lt: 5 } }] })
+
+8) db.items.find({ type: { $in: ["software", "service"] }, price: { $lt: 100 } })
+
+9) db.employees.find({ $and: [ { experience: { $gt: 5 } }, { department: { $in: ["Engineering", "HR"] } }] })
+
+10) db.orders.find({ $or: [ { $and: [{ status: "urgent" }, { total_amount: { $gt: 1000 } }] }, { priority: "high" }] })
