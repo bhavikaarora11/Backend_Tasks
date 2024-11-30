@@ -1,0 +1,13 @@
+use students
+db.students.insertMany([{"name":"av","age":19,"grade":10},{"name":"ayu","age":16,"grade":10},{"name":"ash","age":15,"grade":9}])
+db.students.find({},{"name":true})
+db.students.find({age:{$gt:18}})
+db.students.updateOne({"name":"av"},{$set:{"grade":9}})
+db.students.find()
+db.students.deleteOne({"name":"av"})
+db.students.insertOne({"name":"SAM","age":18,"grade":11})
+db.students.find()
+db.students.insertOne({"name":"RAM","age":18,"grade":11})
+ db.students.countDocuments({ grade: 11 })
+db.students.find({}, { name: 1, grade: 1, _id: 0 })
+ db.students.find().sort({ age: -1 })
